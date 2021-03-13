@@ -1,12 +1,16 @@
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Книги список</title>
+  </head>
 <body>
-   <h1>Books</h1>
+   <h1 id="books_title">Books edited</h1>
    <a href="{{url_for('newBook')}}">
        <button>Добавить книгу</button>
    </a>
    <ol>
        {% for book in books %}
-       <li> {{book.title}} — {{book.author}} </li>
+       <li id="book_line_id"> {{book.title}} — {{book.author}} </li>
        <a href="{{url_for('editBook', book_id = book.id )}}">
            Изменить
        </a>
