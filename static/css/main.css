@@ -1,4 +1,14 @@
 h1{
-    color: #1457ff;
+    color: #072166;
     /*font-weight: bold;*/
+}
+
+#book_line_id{
+    color: blueviolet;
+}
+
+.form-group{
+    color: darkred;
+    font-family: "Droid Serif";
+    font-weight: bold;
 }

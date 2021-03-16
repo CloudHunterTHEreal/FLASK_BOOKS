@@ -1,15 +1,11 @@
 <html>
-{#<link rel="stylesheet" href="../static/css/main.css">#}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   <head>
     <meta charset="utf-8">
     <title>Книги список</title>
   </head>
 <body>
-   <h1 id="books_title">Books edited</h1>
-   <a href="{{url_for('newBook')}}">
-       <button>Добавить книгу</button>
-   </a>
+   <h1 id="books_title">Список книг</h1>
    <ol>
        {% for book in books %}
        <li id="book_line_id"> {{book.title}} — {{book.author}} </li>
@@ -22,5 +18,8 @@
        <br> <br>
        {% endfor %}
    </ol>
+   <a href="{{url_for('newBook')}}">
+       <button>Добавить книгу</button>
+   </a>
 </body>
 </html>
